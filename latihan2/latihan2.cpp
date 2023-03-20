@@ -15,61 +15,45 @@ float segitiga(float a, float t) {
 
 int main()
 {
-    float nilai[10];
     float panjang, lebar, jejari, alas, tinggi;
     int pilihan;
-    bool menu;
-    menu = true;
-    while (menu == true)
-    {
+    do {
         cout << "\n\n===========";
         cout << "\n M E N U";
         cout << "\n\n===========";
         cout << "\n 1. Luas Persegi Panjang";
         cout << "\n 2. Luas Lingkaran";
         cout << "\n 3. Luas Segitiga";
-        cout << "\n 4. Array";
-        cout << "\n 5. Keluar";
-        cout << "\n Pilihan (1/2/3/4/5) : ";
+        cout << "\n 4. Keluar";
+        cout << "\n Pilihan (1/2/3/4) : ";
         cin >> pilihan;
 
-        
+
         switch (pilihan)
         {
-        case 1 : 
-             cout << "Masukkan Panjang = ";
-             cin >> panjang;
-             cout << "Masukkan Lebar = ";
-             cin >> lebar;
-             cout << "\n Luas Persegi Panjang = " << persegipanjang(panjang, lebar);
-             break;
-        case 2 :
+        case 1:
+            cout << "Masukkan Panjang = ";
+            cin >> panjang;
+            cout << "Masukkan Lebar = ";
+            cin >> lebar;
+            cout << "\n Luas Persegi Panjang = " << persegipanjang(panjang, lebar);
+            break;
+        case 2:
             cout << "Masukkan jari-jari = ";
             cin >> jejari;
             cout << "\n Luas lingkaran = " << lingkaran(jejari);
-        case 3 :
+        case 3:
             cout << "Masukkan alas = ";
             cin >> alas;
             cout << "Masukkan tinggi = ";
             cin >> tinggi;
             cout << "\n Luas Segitiga = " << segitiga(alas, tinggi);
-        case 4 :
-            cout << "Mengisi Array";
-            for (int i = 0; i < 10; i++) {
-                cout << "nilai ke-" << (i + 1) << ": ";
-                cin >> nilai[i];
-            }
-            cout << " Membaca Array \n";
-            for (int i = 0; i < 10; i++) {
-                cout << "\nNilai ke-" << (i + 1) << ": " << nilai[i];
-            }
+        case 4:
             break;
-        case 5:
-            menu = false;
         default:
             cout << "Pilihan Salah !!";
             break;
-        }   
-    }
+        }
+    } while (pilihan != 4);
 }
 
